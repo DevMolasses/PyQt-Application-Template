@@ -1,0 +1,266 @@
+/* Stylesheet Template
+The "colors" files contain the color definitions that get inserted at runtime
+into this style template. This allows for a single template to cover all the
+required widgets with a small color definition file for each color scheme.
+*/
+
+/* Base Application Style */
+    * {
+        font-size:16px;
+    }
+
+    QApplication {
+        background-color: @main-background;
+        color: @text;
+    }
+
+/* Checkboxes */
+    QCheckBox {
+        color: @text;
+    }
+
+/* Combo Boxes */
+    QComboBox {
+        background-color: @widget-background;
+        color: @text;
+        border: 1px solid @major-accent;
+        padding: 2px;
+    }
+
+    QComboBox QAbstractItemView {
+        border: 1px solid @major-accent;
+        background-color: @widget-background;
+        alternate-background-color: @widget-alternate-background;
+        color: @text;
+    }
+
+    QComboBox QAbstractItemView::item:hover {
+        background-color: @widget-hover-background;
+    }
+
+    QComboBox QAbstractItemView::item:selected {
+        background-color: @selected-background;
+        color: @selected-color
+    }
+
+/* Headers */
+    QHeaderView::section {
+        background: @widget-foreground;
+        background-color: @widget-foreground;
+        color: @text;
+    }
+
+    QHeaderView::section::selected {
+        selection-color: @major-accent;
+    }
+
+/*Labels*/
+    QLabel {
+        color: @text;
+    }
+
+/* Text Fields (Line Edits) */
+    QLineEdit {
+        background-color: @widget-background;
+        color: @text;
+        border: lpx solid @major-accent;
+        border-radius: 4px;
+        padding: 4px;
+    }
+
+/* Menus */
+    QMenu {
+        background-color: @widget-alternate-background;
+        color: @text;
+    }
+
+    QMenu::item::selected {
+        background-color: @widget-hover-background;
+    }
+
+    QMenu::separator {
+        background: @widget-background;
+        height: 1px;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+/* Menu Bar */
+    QMenuBar {
+        background-color: @main-alternate-background;
+        color: @text;
+        border: lpx solid @widget-alternate-background;
+    }
+
+    QMenuBar::item {
+        background-color: @main-alternate-background;
+        color: @text;
+        padding: 4px 8px;
+    }
+
+    QMenuBar::item:selected {
+        background-color: @widget-alternate-background;
+    }
+
+/* Push Buttons */
+    QPushButton{
+        background-color: @widget-alternate-background;
+        color: @text;
+        border: lpx solid @major-accent;
+        border-radius: 4px;
+        padding: 6px 12px;
+    }
+
+    QPushButton:hover {
+        background-color: @widget-hover-background;
+    }
+
+    QPushButton:pressed {
+        background-color: @widget-background;
+    }
+
+/* Scroll Bars */
+    QScrollBar:vertical {
+        width: 14px;
+        background-color: @main-alternate-background;
+    }
+
+    QScrollBar:horizontal {
+        height: 14px;
+        background-color: @main-alternate-background;
+    }
+
+    QScrollBar::handle {
+        background-color: @scrollbar-handle;
+        border-radius: 7px;
+    }
+
+    QScrollBar::add-line, QScrollBar::sub-line,
+    QScrollBar::add-page, QScrollBar::sub-page {
+        background: none;
+    }
+
+/* Sliders */
+    QSlider {
+        background: @widget-background;
+    }
+
+    QSlider::handle::vertical {
+        background: @slider-color;
+        border: lpx solid @slider-border-color;
+        border-radius: 5px;
+        width: 15px;
+        height: l0px;
+        margin: -2px 0;
+    }
+
+    QSlider::handle::horizontal {
+        background: @slider-color;
+        border: lpx solid @slider-border-color;
+        border-radius: 5px;
+        width: 10px;
+        height: l5px;
+        margin: -2px 0;
+    }
+
+/* Spin Boxes */
+    QSpinBox {
+        background-color: @widget-background;
+        color: @text;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        padding: 2px;
+    }
+
+/* Splitters */
+    QSplitter::handle {
+        background-color: @main-alternate-background;
+    }
+
+    QSplitter::handle:vertical {
+        height: 20px;
+    }
+
+    QSplitter::handle:horizontal {
+        width: 20ps;
+    }
+
+/* Tab Widget */
+    QTabWidget {
+        background-color: @widget-background;
+    }
+
+    QTabWidget::pane {
+        background-color: @widget-background;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+    }
+
+    QTabBar::tab {
+        color: @text;
+        background-color: @widget-background;
+        border: 1px solid @major-accent;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 8px;
+    }
+
+    QTabBar::tab::selected {
+        color: @selected-color;
+        background-color: @selected-background;
+    }
+
+/* Table Views */
+    QTableView {
+        background-color: @widget-background;
+        selection-background-color: @major-accent;
+        alternate-background-color: @widget-alternate-background;
+        color: @text;
+        border: 1px solid @major-accent;
+        padding: 4px;
+    }
+
+    QTableView::item {
+        border-bottom: 1px solid @widget-foreground;
+        border-right: 1px solid @widget-foreground;
+    }
+
+/* Text Browser */
+    QTextBrowser {
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        background-color: @widget-background;
+        color: @text;
+    }
+
+/* Toggle Switches */
+    QToggleSwitch {
+        qproperty-text_color: @text;
+        qproperty-unchecked_color: @toggle-unchecked;
+        qproperty-checked_color: @toggle-checked;
+    }
+
+/* Tree Widget */
+    QTreeWidget {
+        background-color: @widget-background;
+        alternate-background-color: @widget-alternate-background;
+        color: @text;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        padding: 4px;
+    }
+
+    QTreeWidget::item {
+        border: none;
+        padding: 5px;
+    }
+
+    QTreeWidget::item:hover {
+        background-color: @major-accent;
+    }
+
+/* Windows, Dialogs, and MessageBoxes */
+    QMainWindow, QDialog, QMessageBox {
+        background-color: @main-alternate-background;
+        border-radius: 6px;
+    }

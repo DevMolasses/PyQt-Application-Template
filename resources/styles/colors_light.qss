@@ -1,0 +1,16 @@
+@theme-name = Light
+@main-background = #ffffff
+@main-alternate-background = #ffffff
+@widget-background = #ffffff
+@widget-alternate-background = #eeeeee
+@widget-hover-background = #cccccc
+@widget-foreground = #eeeeee
+@text = #000000
+@scrollbar-handle = #bbbbbb
+@major-accent = #aaaaaa
+@toggle-unchecked = #777777
+@toggle-checked = #00b0ff
+@selected-color = #ffffff
+@selected-background = #00b0ff
+@slider-color = #00b0ff
+@slider-border-color = #00b0ff
