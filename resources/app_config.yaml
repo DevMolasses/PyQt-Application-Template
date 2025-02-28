@@ -1,0 +1,18 @@
+DEFAULT:
+  theme_filename: colors_light.qss
+  window_restore: false
+  window_x: 100
+  window_y: 100
+  window_width: 1600
+  window_height: 1200
+  recent_files: {}
+  num_recents_to_show: 10
+treve:
+  theme_filename: colors_dark_orange.qss
+  window_restore: true
+  window_x: 914
+  window_y: 567
+  window_width: 584
+  window_height: 374
+  recent_files: {}
+  num_recents_to_show: 10

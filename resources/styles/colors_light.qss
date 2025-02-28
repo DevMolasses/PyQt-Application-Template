@@ -5,6 +5,9 @@
 @widget-alternate-background = #eeeeee
 @widget-hover-background = #cccccc
 @widget-foreground = #eeeeee
+@widget-disabled-background = #dddddd
+@widget-disabled-foreground = #999999
+@widget-disabled-border = #bbbbbb
 @text = #000000
 @scrollbar-handle = #bbbbbb
 @major-accent = #aaaaaa
@@ -14,3 +17,6 @@
 @selected-background = #00b0ff
 @slider-color = #00b0ff
 @slider-border-color = #00b0ff
+@combobox-down-arrow = #aaaaaa
+@button-plus-icon = #0bb0ff
+@button-minus-icon = #0bb0ff

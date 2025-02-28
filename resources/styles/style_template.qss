@@ -4,6 +4,27 @@ into this style template. This allows for a single template to cover all the
 required widgets with a small color definition file for each color scheme.
 */
 
+/* App specific widgets (named widgets)*/
+    QWidget#tipDetails {
+        background-color: @widget-alternate-background;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+    }
+    
+    QPushButton#addButton {
+        background-color: @widget-alternate-background;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        image: @button-plus-icon;
+    }
+    
+    QPushButton#deleteButton {
+        background-color: @widget-alternate-background;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        image: @button-minus-icon;
+    }
+
 /* Base Application Style */
     * {
         font-size:16px;
@@ -12,6 +33,13 @@ required widgets with a small color definition file for each color scheme.
     QApplication {
         background-color: @main-background;
         color: @text;
+    }
+    
+    QWidget:disabled{
+        background-color: @widget-disabled-background;
+        color: @widget-disabled-foreground;
+        border: 1px solid @widget-disabled-border;
+        border-radius: 4px;
     }
 
 /* Checkboxes */
@@ -24,7 +52,20 @@ required widgets with a small color definition file for each color scheme.
         background-color: @widget-background;
         color: @text;
         border: 1px solid @major-accent;
+        border-radius: 4px;
         padding: 2px;
+    }
+
+    QComboBox::drop-down {
+        background-color: @widget-alternate-background;
+        border: none;
+        width: 20px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    QComboBox::down-arrow {
+        image: @combobox-down-arrow;
     }
 
     QComboBox QAbstractItemView {
@@ -43,6 +84,23 @@ required widgets with a small color definition file for each color scheme.
         color: @selected-color
     }
 
+/* Group Box */
+    QGroupBox {
+        background-color: @main-alternate-background;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        margin-top: 20px;
+        color: @text;
+    }
+
+    QGroupBox::title {
+        subcontrol-origin: margin;
+        padding: 0 0px;
+        font-weight: bold;
+        top: 7px;
+        left: 20px;
+    }
+
 /* Headers */
     QHeaderView::section {
         background: @widget-foreground;
@@ -54,16 +112,30 @@ required widgets with a small color definition file for each color scheme.
         selection-color: @major-accent;
     }
 
-/*Labels*/
+/* Labels */
     QLabel {
         color: @text;
+    }
+
+/* LCD Numbers */
+    QLCDNumber {
+        background-color: @widget-background;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        color: @text;
+    }
+
+    QLCDNumber::segment {
+        border: 1px solid @major-accent;
+        padding: 2px;
+        background-color: @widget-background;
     }
 
 /* Text Fields (Line Edits) */
     QLineEdit {
         background-color: @widget-background;
         color: @text;
-        border: lpx solid @major-accent;
+        border: 1px solid @major-accent;
         border-radius: 4px;
         padding: 4px;
     }
@@ -89,7 +161,7 @@ required widgets with a small color definition file for each color scheme.
     QMenuBar {
         background-color: @main-alternate-background;
         color: @text;
-        border: lpx solid @widget-alternate-background;
+        border: 1px solid @widget-alternate-background;
     }
 
     QMenuBar::item {
@@ -106,7 +178,7 @@ required widgets with a small color definition file for each color scheme.
     QPushButton{
         background-color: @widget-alternate-background;
         color: @text;
-        border: lpx solid @major-accent;
+        border: 1px solid @major-accent;
         border-radius: 4px;
         padding: 6px 12px;
     }
@@ -147,7 +219,7 @@ required widgets with a small color definition file for each color scheme.
 
     QSlider::handle::vertical {
         background: @slider-color;
-        border: lpx solid @slider-border-color;
+        border: 1px solid @slider-border-color;
         border-radius: 5px;
         width: 15px;
         height: l0px;
@@ -156,7 +228,7 @@ required widgets with a small color definition file for each color scheme.
 
     QSlider::handle::horizontal {
         background: @slider-color;
-        border: lpx solid @slider-border-color;
+        border: 1px solid @slider-border-color;
         border-radius: 5px;
         width: 10px;
         height: l5px;
@@ -165,6 +237,14 @@ required widgets with a small color definition file for each color scheme.
 
 /* Spin Boxes */
     QSpinBox {
+        background-color: @widget-background;
+        color: @text;
+        border: 1px solid @major-accent;
+        border-radius: 4px;
+        padding: 2px;
+    }
+    
+    QDoubleSpinBox {
         background-color: @widget-background;
         color: @text;
         border: 1px solid @major-accent;
@@ -184,6 +264,12 @@ required widgets with a small color definition file for each color scheme.
     QSplitter::handle:horizontal {
         width: 20ps;
     }
+    
+/* Status Bar*/
+    QStatusBar {
+        color: @text;
+        background-color: @widget-background;
+    }
 
 /* Tab Widget */
     QTabWidget {
@@ -191,7 +277,7 @@ required widgets with a small color definition file for each color scheme.
     }
 
     QTabWidget::pane {
-        background-color: @widget-background;
+        background-color: @widget-alternate-background;
         border: 1px solid @major-accent;
         border-radius: 4px;
     }
