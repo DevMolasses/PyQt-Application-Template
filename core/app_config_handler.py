@@ -37,6 +37,8 @@ class ConfigHandler:
             self._username = "DEFAULT"
 
         self.config_filepath = config_filepath
+        self.temp_dir = ".\\resources\\temp\\"
+        os.makedirs(self.temp_dir, exist_ok=True)
 
         try:
             with open(self.config_filepath, 'r') as file:
@@ -92,7 +94,7 @@ class ConfigHandler:
                 with open(svg_templates[lbl], 'r') as svg_file:
                     svg_content = svg_file.read()
                 svg_content = svg_content.replace(lbl, clr)
-                svg_path = f".\\resources\\temp\\{lbl[1:]}-in-use.svg"
+                svg_path = f"{self.temp_dir}{lbl[1:]}-in-use.svg"
                 with open(svg_path, "w") as temp_file:
                     temp_file.write(svg_content)
                 url = "url(" + svg_path.replace("\\", "/") + ")"
